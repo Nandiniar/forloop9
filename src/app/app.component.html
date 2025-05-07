@@ -1,0 +1,19 @@
+<h1>For loop in angular</h1>
+
+<br>
+<br>
+@for(item of users;track item){
+  <h2>{{item}}</h2>
+}
+<!-- for loop should always have track expression-->
+ <hr>
+ @for(student of students;track student;let id=$index){
+  <h2>
+    <span>{{id+1}}</span>
+    <span>{{student.name}} :: {{student.age}}</span>
+  <span>{{student.email}}</span>
+
+  <span>{{student.age}}</span>
+  <button (click)="getName(student.name)">Get Name</button>
+  </h2>
+ }
